@@ -1,3 +1,9 @@
+:root {
+    /* --main-bg-header: #635854; */
+    --main-bg-header: #aa350a;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: #635854;
+    background-color: var(--main-bg-header);
     border-bottom: 4px solid #3596F5;
     color: #fff;
 }
