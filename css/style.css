@@ -1,14 +1,20 @@
+:root {
+    /* --main-bg-header: #aa350a; */
+    --main-bg-header: #aa350a;
+}
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto',
-    sans-serif;
+        sans-serif;
 }
 
 .header {
-    background-color: #635854;
+    background-color: var(--main-bg-header);
     border-bottom: 4px solid #3596F5;
     color: #fff;
 }
