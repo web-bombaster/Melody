@@ -1,8 +1,19 @@
 :root {
     /* --main-bg-header: #aa350a; */
     --main-bg-header: #aa350a;
+    --color-akcent: #3596F5;
 }
 
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'),
+    local('BebasNeueRegular'),
+    url('./../fonts/bebasneueregular.woff2') format('woff2'),
+    url('./../fonts/bebasneueregular.woff') format('woff'),
+    url('./../fonts/bebasneueregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 * {
     box-sizing: border-box;
@@ -81,6 +92,15 @@ body {
     margin-right: auto;
     padding-top: 54px;
     padding-bottom: 54px;
+
+    display: flex;
+}
+
+.main-title {
+    margin-top: 0;
+    font-family: 'Bebas Neue';
+    font-size: 37px;
+    line-height: 1;
 }
 
 .main-image path {
@@ -91,4 +111,61 @@ body {
 
 .main-image path:hover {
     opacity: 1;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    margin-top: 68px;
+    margin-bottom: 68px;
+
+    text-align: center;
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue';
+    font-size: 74px;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--main-bg-header);
+}
+
+.counter-button {
+    width: 32px;
+    height: 20px;
+
+    background-color: transparent;
+    border: 0;
+
+    background-image: url('./../img/arrow.svg');
+    background-position: center center;
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+.counter-bottom {
+    transform: rotate(180deg);
+}
+
+.button {
+    background-color: var(--color-akcent);
+    padding: 16px 40px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
 }
