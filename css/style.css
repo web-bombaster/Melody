@@ -113,6 +113,10 @@ body {
     opacity: 1;
 }
 
+path.current-floor {
+    opacity: 1;
+}
+
 .main-info {
     display: flex;
     flex-direction: column;
@@ -145,6 +149,7 @@ body {
 .counter-button {
     width: 32px;
     height: 20px;
+    padding: 0;
 
     background-color: transparent;
     border: 0;
