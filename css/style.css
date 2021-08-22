@@ -2,6 +2,7 @@
     /* --main-bg-header: #aa350a; */
     --main-bg-header: #aa350a;
     --color-akcent: #3596F5;
+    --color-text-default: #635854;
 }
 
 @font-face {
@@ -22,6 +23,7 @@
 body {
     font-family: 'Roboto',
         sans-serif;
+    color: var(--color-text-default);
 }
 
 .header {
@@ -173,4 +175,130 @@ path.current-floor {
     border-radius: 6px;
 
     cursor: pointer;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .2s;
+}
+
+.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-dialog {
+    position: relative;
+
+    flex-grow: 1;
+    display: flex;
+
+    max-width: 1000px;
+    min-height: 565px;
+    background-color: #fff;
+
+    transform: translateY(-10%);
+    transition: transform .2s, opacity .2s;
+    transition-delay: .2s;
+    opacity: 0;
+}
+
+.is-open>.modal-dialog {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 38px;
+    right: 27px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    background-color: #EBEBEB;
+    width: 60%;
+    padding: 50px;
+    text-align: center;
+}
+
+.modal-info {
+    width: 40%;
+    padding: 50px 46px;
+}
+
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    line-height: 1;
+    font-weight: normal;
+    color: #000;
+}
+
+.flat-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.flat-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.flat-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: var(--color-text-default);
+    text-decoration: none;
+}
+
+.flat-link:hover,
+.flat-link.activ {
+    color: var(--color-akcent);
+    text-decoration: underline;
+}
+
+.modal-alert {
+    margin-top: 56px;
+
+    font-style: italic;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.modal-image path {
+    opacity: 0;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.modal-image path:hover,
+.modal-image .activ {
+    opacity: 1;
+}
+
+.modal-counter.counter {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
 }
